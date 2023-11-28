@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0A1B73E-A95E-4C74-8D7F-A01C90509BDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PointOfSale</RootNamespace>
+    <AssemblyName>PointOfSale</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bussines\IProductService.cs" />
+    <Compile Include="Bussines\ITransactionService.cs" />
+    <Compile Include="Bussines\ProductService.cs" />
+    <Compile Include="Bussines\ServiceResponse.cs" />
+    <Compile Include="Bussines\SQLProvider.cs" />
+    <Compile Include="Bussines\TransactionService.cs" />
+    <Compile Include="Forms\EditProductScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProductScreen.Designer.cs">
+      <DependentUpon>EditProductScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Product.cs" />
+    <Compile Include="models\SideMenuItem.cs" />
+    <Compile Include="models\Transaction.cs" />
+    <Compile Include="models\Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecondForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondForm.Designer.cs">
+      <DependentUpon>SecondForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucAboutScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucAboutScreen.Designer.cs">
+      <DependentUpon>ucAboutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucHomeScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucHomeScreen.Designer.cs">
+      <DependentUpon>ucHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucProductsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucProductsScreen.Designer.cs">
+      <DependentUpon>ucProductsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucReceiptScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucReceiptScreen.Designer.cs">
+      <DependentUpon>ucReceiptScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucReportsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucReportsScreen.Designer.cs">
+      <DependentUpon>ucReportsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucSettingsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucSettingsScreen.Designer.cs">
+      <DependentUpon>ucSettingsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucSideMenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucSideMenuItem.Designer.cs">
+      <DependentUpon>ucSideMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucTransaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucTransaction.Designer.cs">
+      <DependentUpon>ucTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersControls\ucUsersScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usersControls\ucUsersScreen.Designer.cs">
+      <DependentUpon>ucUsersScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\Enums.cs" />
+    <EmbeddedResource Include="Forms\EditProductScreen.resx">
+      <DependentUpon>EditProductScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SecondForm.resx">
+      <DependentUpon>SecondForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucAboutScreen.resx">
+      <DependentUpon>ucAboutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucHomeScreen.resx">
+      <DependentUpon>ucHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucProductsScreen.resx">
+      <DependentUpon>ucProductsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucReceiptScreen.resx">
+      <DependentUpon>ucReceiptScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucReportsScreen.resx">
+      <DependentUpon>ucReportsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucSettingsScreen.resx">
+      <DependentUpon>ucSettingsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucSideMenuItem.resx">
+      <DependentUpon>ucSideMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucTransaction.resx">
+      <DependentUpon>ucTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersControls\ucUsersScreen.resx">
+      <DependentUpon>ucUsersScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\home-icon.png" />
+    <None Include="Resources\cross-icon.png" />
+    <None Include="Resources\about-icon.png" />
+    <None Include="Resources\prodcuts-icon.png" />
+    <None Include="Resources\reports-icon.png" />
+    <None Include="Resources\users-icon.png" />
+    <None Include="Resources\receipts-icon.jpg" />
+    <None Include="Resources\settings-icon.png" />
+    <None Include="Resources\home-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
